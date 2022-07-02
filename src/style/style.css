@@ -66,21 +66,49 @@ main .main-section-1 .main-section-1--div{
 
 
 .main-section-1 .last-news-section{
-    display: flex;
-    flex-wrap: wrap;
     width: 90%;
     height:  auto;
     margin: 20px auto;
-    justify-content: center;
-    gap: 20px;
-    justify-content: space-between;
-    padding-top: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px
 }
 
-.main-section-1 .last-news-section .last-news--div{
-    width:  300px;
-    height: 300px;
-    background-color: black;
+.last-news-section .last-news-div-001{
+    width: 100%;
+    height: 200px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: red ;
+}
+
+.last-news-section .last-news-div-002{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: green;
+}
+.last-news-section .last-news-div-003{
+    width: 100%;
+    height: 200px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-color: pink;
+}
+.last-news-section .last-news-div-004{
+    width: 100%;
+    height: 200px;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-color: brown;
 }
 
 main .post{
@@ -101,14 +129,24 @@ main .post .post-span span h2, .main-section-1 .post-span span h2{
     font-size: 15px; 
 }
 
-.instagram-last-post .insta-post{
-    width: 200px;
-    height: 200px;
-    background-color: red;
-    margin: 20px 10px;
+.instagram-last-post .insta-content{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
 }
-.instagram-last-post .insta-post:hover{
-    background-color: grey;
+
+.instagram-last-post .insta-content span .insta-post{
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+}
+
+.instagram-last-post .insta-content span .insta-post img{
+    width: 100%;
+    height: 100%;
 }
 
 .youtube-last-post .youtube-content{
@@ -116,16 +154,17 @@ main .post .post-span span h2, .main-section-1 .post-span span h2{
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
     gap: 20px;
 }
 
 .youtube-last-post .youtube-content span{
-    width: 280px;
+    width: 215px;
 }
 
 .youtube-last-post .youtube-content .minatura-yt{
-    width: 260px;
-    height: 180px;
+    width: 200px;
+    height: 130px;
     object-fit: cover;
 }
 
@@ -138,4 +177,5 @@ footer{
     background-color: grey;
     text-align: center;
     font-size: 14px;
+    margin-top: 20px;
 }
